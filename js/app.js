@@ -15,7 +15,8 @@ function HornyImage(obj) {
 
 HornyImage.prototype.render = function() {
   $('main').append('<section class = "clone"></section>');
-  let $clone = $('section [class = "clone"]');
+
+  let $clone = $('section[class = "clone"]');
 
   let hornyTemplate = $('#photo-template').html();
 
@@ -27,7 +28,10 @@ HornyImage.prototype.render = function() {
 
   $clone.removeClass('clone');
   $clone.attr('class', this.title);
-  console.log('see horny images!')
+
+  console.log('see horny images!');
+
+  console.log(this);
 }
 
 function readJson() {
@@ -39,9 +43,12 @@ function readJson() {
   }).then(() => {
     allHornyImages.forEach(horn => {
       horn.render();
+      console.log('work!');
     })
   })
 }
+
+
 
 $(() => readJson());
 
