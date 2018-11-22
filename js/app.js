@@ -1,5 +1,7 @@
 'use strict'
 
+const allHornyImages = [];
+
 function HornyImage(obj) {
   this.image_url = obj.image_url;
   this.title = obj.title;
@@ -10,10 +12,9 @@ function HornyImage(obj) {
   allHornyImages.push(this);
 }
 
-const allHornyImages = [];
 
 HornyImage.prototype.render = function() {
-  $('main').append()('<section class = "clone"></section>');
+  $('main').append('<section class = "clone"></section>');
   let $clone = $('section [class = "clone"]');
 
   let hornyTemplate = $('#photo-template').html();
@@ -26,6 +27,7 @@ HornyImage.prototype.render = function() {
 
   $clone.removeClass('clone');
   $clone.attr('class', this.title);
+  console.log('see horny images!')
 }
 
 function readJson() {
