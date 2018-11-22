@@ -6,7 +6,7 @@
 
  #Feature 2: Filter Images
  - Estimate of time to complete: 1 HR
- - Start Time:
+ - Start Time: 8:45 PM
  - Finish Time: 
  - Actual Time:
 
