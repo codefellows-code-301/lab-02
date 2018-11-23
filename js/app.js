@@ -14,6 +14,7 @@ function HornyImage(obj) {
 
 
 HornyImage.prototype.render = function() {
+  //Rendering Objects
   $('main').append('<section class = "clone"></section>');
 
   let $clone = $('section[class = "clone"]');
@@ -29,9 +30,25 @@ HornyImage.prototype.render = function() {
   $clone.removeClass('clone');
   $clone.attr('class', this.title);
 
+  console.log('see horny images!')
+  
+  //Adding Keyword Filter
+  $('select').append('<option class="keyword"></option>');
+  let $option = $('option[class="keyword"]');
+
+  $option.find('option').text('value', this.keyword);
+  
+  $option.removeClass('keyword');
+  $option.attr('value', this.keyword);
+  $option.text(this.keyword);
+  
+  console.log($option);
+
+
   console.log('see horny images!');
 
   console.log(this);
+
 }
 
 function readJson() {
@@ -51,6 +68,7 @@ function readJson() {
 
 
 $(() => readJson());
+
 
 // readJson();
 
