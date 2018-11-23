@@ -1,12 +1,12 @@
 #Feature 1: Display Images
  - Estimate of time to complete: 1.5 HR
  - Start Time: 6:15 PM
- - Finish Time: 
- - Actual Time:
+ - Finish Time: 8:45 (20 mins for break)
+ - Actual Time: 2.5 HR
 
  #Feature 2: Filter Images
  - Estimate of time to complete: 1 HR
- - Start Time:
+ - Start Time: 8:45 PM
  - Finish Time: 
  - Actual Time:
 
