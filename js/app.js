@@ -1,6 +1,7 @@
 'use strict'
-
+//Global
 const allHornyImages = [];
+const keywordList = [];
 
 function HornyImage(obj) {
   this.image_url = obj.image_url;
@@ -12,9 +13,8 @@ function HornyImage(obj) {
   allHornyImages.push(this);
 }
 
-
+//Rendering Objects
 HornyImage.prototype.render = function() {
-  //Rendering Objects
   $('main').append('<section class = "clone"></section>');
 
   let $clone = $('section[class = "clone"]');
@@ -30,25 +30,22 @@ HornyImage.prototype.render = function() {
   $clone.removeClass('clone');
   $clone.attr('class', this.title);
 
-  console.log('see horny images!')
-  
-  //Adding Keyword Filter
-  $('select').append('<option class="keyword"></option>');
-  let $option = $('option[class="keyword"]');
+}
 
-  $option.find('option').text('value', this.keyword);
-  
-  $option.removeClass('keyword');
-  $option.attr('value', this.keyword);
-  $option.text(this.keyword);
-  
-  console.log($option);
+//Adding Keyword Filter
+HornyImage.prototype.options = function () {
+  if (keywordList.indexOf(this.keyword) === -1) {
+    $('select').append('<option class="keyword"></option>');
+    let $option = $('option[class="keyword"]');
 
+    $option.find('option').text('value', this.keyword);
 
-  console.log('see horny images!');
+    $option.removeClass('keyword');
+    $option.attr('value', this.keyword);
+    $option.text(this.keyword);
 
-  console.log(this);
-
+    keywordList.push(this.keyword);
+  }
 }
 
 function readJson() {
@@ -60,18 +57,10 @@ function readJson() {
   }).then(() => {
     allHornyImages.forEach(horn => {
       horn.render();
+      horn.options();
       console.log('work!');
     })
   })
 }
 
-
-
 $(() => readJson());
-
-
-// readJson();
-
-// $(document).ready(function() {
-//   $.get("data/page-1.json")
-// });
