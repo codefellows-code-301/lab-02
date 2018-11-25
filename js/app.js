@@ -30,6 +30,8 @@ HornyImage.prototype.render = function() {
   $clone.removeClass('clone');
   $clone.attr('class', this.title);
 
+  $clone.attr('keyword', this.keyword);
+
 }
 
 //Adding Keyword Filter
@@ -63,4 +65,16 @@ function readJson() {
   })
 }
 
+
+//Code from Skyler/Nicole
+//Option view handler
+$('#options').on('change', function(){
+  console.log('inside option choice')
+  if($(this).val()) {
+    $('section').hide();
+    $(`section[keyword="${$(this).val()}"]`).show();
+  }
+});
+
 $(() => readJson());
+
