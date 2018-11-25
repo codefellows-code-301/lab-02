@@ -16,7 +16,7 @@
 
  #Feature 3: Style the Application
  - Estimate of time to complete: 30 MIN
- - Start Time:
- - Finish Time: 
- - Actual Time:
+ - Start Time: 4:22 PM 
+ - Finish Time: 4:46 PM
+ - Actual Time: 24 MIN
 
