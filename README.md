@@ -10,9 +10,9 @@
  - Finish Time: 9:30 PM 11/21/18
  - Actual Time: 45 MIN 11/21/18
  - Start Time: 2:00 PM 11/24/18
- - Finish Time: XXXX 11/24/18
- - Actual Time: XXXX 11/24/18
- - Total Time: 
+ - Finish Time: 4:21 PM 11/24/18
+ - Actual Time: 2 HRS 21 MIN 11/24/18
+ - Total Time: 3 HRS 6 MIN 11/24/18
 
  #Feature 3: Style the Application
  - Estimate of time to complete: 30 MIN
